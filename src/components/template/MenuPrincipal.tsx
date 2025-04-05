@@ -1,17 +1,23 @@
-import { IconMenu, IconX } from "@tabler/icons";
+import { IconArrowsLeftRight, IconMathGreater, IconMenu, IconUsers, IconX } from "@tabler/icons-react";
 import { MenuItem } from "../../data/models/MenuItem";
 import { MenuSecao } from "../../data/models/MenuSecao";
 import Logo from "./Logo";
 import MenuPrincipalItem from "./MenuPrincipalItem";
 import MenuPrincipalSecao from "./MenuPrincipalSecao";
 import Flex from "./Flex";
+import { IconNumbers } from "@tabler/icons-react";
 
 export default function MenuPrincipal() {
     const secoes = [
         {
             titulo: "Essenciais",
             aberta: true,
-            itens: [],
+            itens: [
+                { titulo: "Contador", url: "/essenciais/contador", tag: "useState", icone: <IconNumbers /> },
+                { titulo: "Votação", url: "/essenciais/votacao", tag: "useState", icone: <IconUsers /> },
+                { titulo: "Consulta à API", url: "/essenciais/consultaAPI", tag: "useEffect", icone: <IconArrowsLeftRight /> },
+                { titulo: "Maior", url: "/essenciais/maior", tag: "useEffect", icone: <IconMathGreater /> }
+            ],
         },
     ];
     const mini = false;
