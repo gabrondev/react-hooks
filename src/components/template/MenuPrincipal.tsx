@@ -1,4 +1,4 @@
-import { IconArrowsLeftRight, IconLetterCase, IconMathGreater, IconMenu, IconRefreshAlert, IconSection, IconUsers, IconX } from "@tabler/icons-react";
+import { IconAppWindow, IconArrowsLeftRight, IconLetterCase, IconMathGreater, IconMenu, IconRefreshAlert, IconSection, IconUsers, IconX } from "@tabler/icons-react";
 import { MenuItem } from "../../data/models/MenuItem";
 import { MenuSecao } from "../../data/models/MenuSecao";
 import Logo from "./Logo";
@@ -11,7 +11,7 @@ export default function MenuPrincipal() {
     const secoes = [
         {
             titulo: "Essenciais",
-            aberta: true,
+            aberta: false,
             itens: [
                 { titulo: "Contador", url: "/essenciais/contador", tag: "useState", icone: <IconNumbers /> },
                 { titulo: "Votação", url: "/essenciais/votacao", tag: "useState", icone: <IconUsers /> },
@@ -23,6 +23,13 @@ export default function MenuPrincipal() {
                 { titulo: "Contagem Caracteres", url: "/essenciais/contagemCaracteresRef", tag: "useRef", icone: <IconLetterCase /> }
             ],
         },
+        {
+            titulo: "Personalizados",
+            aberta: true,
+            itens: [
+                { titulo: "Modal", url: "/personalizados/modal", tag: "personalizados", icone: <IconAppWindow /> }
+            ]
+        }
     ];
     const mini = false;
     function renderizarSecoes() {
