@@ -1,4 +1,4 @@
-import { IconAppWindow, IconArrowsLeftRight, IconDimensions, IconLetterCase, IconLock, IconMathGreater, IconNumbers, IconRefreshAlert, IconSection, IconShoppingCart, IconUsers } from "@tabler/icons-react";
+import { IconAppWindow, IconArrowsLeftRight, IconDimensions, IconForms, IconLetterCase, IconLock, IconMathGreater, IconNumbers, IconPin, IconRefreshAlert, IconSection, IconShoppingCart, IconUsers } from "@tabler/icons-react";
 
 export const secoes = [
     {
@@ -17,7 +17,7 @@ export const secoes = [
     },
     {
         titulo: "Personalizados",
-        aberta: true,
+        aberta: false,
         itens: [
             { titulo: "Modal", url: "/personalizados/modal", tag: "personalizados", icone: <IconAppWindow /> },
             { titulo: "Tamanho Janela", url: "/personalizados/tamanhoJanela", tag: "personalizados", icone: <IconDimensions /> },
@@ -26,9 +26,18 @@ export const secoes = [
     },
     {
         titulo: "Contexto",
-        aberta: true,
+        aberta: false,
         itens: [
             { titulo: "Loja", url: "/contexto/loja", tag: "useContext", icone: <IconShoppingCart /> }
+        ]
+    },
+    {
+        titulo: "Outros",
+        aberta: true,
+        itens: [
+            { titulo: "Memoizando elementos", url: "/outros/memoizacao", tag: "useMemo", icone: <IconPin /> },
+            { titulo: "Memoizando funções", url: "/outros/memoizandoFuncoes", tag: "useCallback", icone: <IconPin /> },
+            { titulo: "Formulário 1", url: "/outros/formularioImperativeHandle", tag: "useImperativeHandle", icone: <IconForms /> }
         ]
     }
 ];
